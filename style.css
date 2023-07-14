@@ -1,6 +1,9 @@
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .slider-container {
@@ -16,6 +19,18 @@ html, body {
   white-space: nowrap;
   font-size: 0;
   transition: 0.8s;
+}
+.slider-container * h2, .slider-container p {
+  color: #ffffff;
+  background-color: rgba(204, 204, 204, 0.2);
+}
+.slider-container * h2 {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+.slider-container * p {
+  margin-top: 0px;
+  margin-bottom: 16px;
 }
 .slider-container .slide {
   background-repeat: no-repeat;
@@ -49,6 +64,7 @@ html, body {
   height: 60px;
   line-height: 60px;
   text-align: center;
+  color: #ffffff;
   opacity: 0.7;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -59,7 +75,7 @@ html, body {
 .slider-container .CSSgal .prevNext a span {
   font-size: 40px;
   font-weight: bolder;
-  color: rgb(59, 59, 59);
+  color: rgb(255, 255, 255);
   position: absolute;
 }
 .slider-container .CSSgal .prevNext a:hover {
@@ -122,9 +138,12 @@ html, body {
   display: flex;
   gap: 20px;
   justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 20px;
+  padding-top: 110px;
+  margin-top: 0px;
+  border-bottom-width: 30px;
+  padding-bottom: 110px;
   flex-wrap: wrap;
+  background-color: #f7f7f7;
 }
 .cards-container .card {
   display: flex;
@@ -137,14 +156,243 @@ html, body {
   background-color: white;
   box-shadow: 0px 0px 10px rgb(238, 238, 238);
   transition: all 0.2s;
+  color: rgb(72, 72, 72);
   cursor: pointer;
 }
 .cards-container .card img {
   height: 130px;
+  width: 70%;
 }
 .cards-container .card:hover {
   transform: scale(1.1);
   box-shadow: 5px 5px 20px rgb(208, 208, 208);
+}
+
+.form-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-content .form-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  margin: 10%;
+  border-radius: 20px;
+  padding: 30px;
+  padding-top: 10px;
+  border: 1px solid rgb(231, 231, 231);
+  box-shadow: 5px 5px 20px rgb(222, 222, 222);
+  color: rgb(72, 72, 72);
+  max-width: 600px;
+}
+.form-content .form-container .form-area {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+}
+.form-content .form-container .form-area .form-inputs {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.form-content .form-container .form-area .form-inputs input {
+  border: 1px solid rgb(182, 182, 182);
+  outline: none;
+  border-radius: 12px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.form-content .form-container .form-area .form-inputs .error {
+  border-color: red;
+}
+.form-content .form-container .form-area textarea {
+  border: 1px solid rgb(182, 182, 182);
+  outline: none;
+  border-radius: 12px;
+  padding: 20px;
+  resize: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.form-content .form-container .left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: 100%;
+  width: 100%;
+}
+.form-content .form-container button {
+  margin-top: 20px;
+  border: none;
+  border-radius: 20px;
+  min-width: 90px;
+  padding: 10px;
+  background-color: rgb(255, 76, 76);
+  color: white;
+  cursor: pointer;
+  font-weight: bolder;
+}
+.form-content .form-container button:hover {
+  background-color: rgb(207, 61, 61);
+}
+
+@media only screen and (max-width: 650px) {
+  .form-container .form-area {
+    flex-direction: column;
+  }
+}
+.burguer-menu-custom {
+  display: none;
+}
+
+@media only screen and (max-width: 450px) {
+  .burguer-menu-custom {
+    display: inherit;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+  }
+}
+#btn-top {
+  transform: rotate(90deg) scale(0.8);
+  transition: all 0.2s;
+  position: fixed;
+  top: auto;
+  bottom: 50px;
+  left: auto;
+  right: 50px;
+  background-color: #ffffff;
+  outline: none;
+  border: none;
+  padding: 0px 25px 10px 25px;
+  font-size: 40px !important;
+  box-shadow: 2px 2px 8px rgb(192, 192, 192);
+  border-radius: 30px;
+  z-index: 10000;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+#btn-top:hover {
+  transform: rotate(90deg) scale(0.9);
+  box-shadow: 4px 4px 10px rgb(192, 192, 192);
+}
+
+.g-maps-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  padding: 70px;
+  background-color: #1a2e45;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: tomato;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: fixed;
+  max-width: 100vw;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
 }
 
 /*# sourceMappingURL=style.css.map */
